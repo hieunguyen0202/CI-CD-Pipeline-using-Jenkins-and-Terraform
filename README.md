@@ -114,7 +114,7 @@ resource "google_storage_bucket" "my-bucket" {
 }
 ```
 
-```jenkins
+```yaml
 pipeline {
     agent any
 	
