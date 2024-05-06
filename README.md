@@ -105,6 +105,7 @@
 - Create some file `main.tf` and `Jenkinsfile`
 
 ```tf
+# main.tf
 resource "google_storage_bucket" "my-bucket" {
   name                     = "githubdemo-bucket-001"
   project                  = "ci-cd-jenkins-terraform"
@@ -115,6 +116,7 @@ resource "google_storage_bucket" "my-bucket" {
 ```
 
 ```yaml
+# Jenkinsfile
 pipeline {
     agent any
 	
@@ -163,7 +165,31 @@ pipeline {
 }
 ```
 
+- Create [service account](https://console.cloud.google.com/iam-admin/serviceaccounts?hl=vi&project=ci-cd-jenkins-terraform) on GCP 
+- Click on `Create service account` with name `jenkin-tf` and assign a role `Storage Admin` and click `Done`
 
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/7174b28a-a012-49f0-b06e-6c1d9198b28d)
+
+- Click on this service account that created and switch `KEYS` tab and download `JSON` key
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/d8d8a0c3-78e6-459f-9c65-95c54b545bba)
+
+- Go back to Jenkin and add credentials (Manage Jenkins -> Credentials -> System -> Global credentials (unrestricted) -> Add Credentials)
+- Choose type kind `Secret file` and upload the Key JSON file and give a name `gcp-key` that the same name in Jenkins config file
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  
   
 
 
