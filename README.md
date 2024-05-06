@@ -32,7 +32,36 @@
     ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/d77407c7-2484-46fa-b2d6-e2590ff982dd)
 
   - Everything else left by default
-  - Click on `Deploy`
+  - Click on `Deploy` and wait some times to complete and go to next step
+
+### Setup UI jenkins
+- Go to the [VM instance](https://console.cloud.google.com/compute/instances?hl=vi&project=ci-cd-jenkins-terraform) and copy this `URL external IP` and go to the Jenkins
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/df08b582-ee4c-4704-942d-4c590e2fb7bc)
+
+- Copy this username and password in `Deployment manager`-> Click `jenkins-vm`
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/8cf52e57-3b28-4b85-ad9c-a8b8aa3171ff)
+
+- You need to install some plugins `Pipeline` `Pipeline:API` `Pipeline: SCM Step` `Pipeline: Job` `Pipeline: Groovy` `Pipeline: Statge View` (Go to Manage Jekins -> Plugins -> Available plugins)
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/1f49a9a4-7e1e-4962-b9aa-1059141f0aad)
+
+- Wait for seconds and restart the Jenkins machine
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/cbaf0872-b791-4e2b-ba7e-b7d989129a0f)
+
+- 
+
+  
+
+  
+
+  
+
+  
+
+  
  
   
 
