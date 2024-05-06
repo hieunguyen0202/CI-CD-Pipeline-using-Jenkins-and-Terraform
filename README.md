@@ -200,6 +200,12 @@ pipeline {
 
   ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/5b7fab75-b22b-4a06-8126-9782c665119b)
 
+### Create new pipeline
+- Go to `Add item` -> Enter name `gcp-tf-demo` and choose pipeline
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/a93b2002-aed7-4354-9ffd-fd7ccf77f96a)
+
+- 
 
   
 
