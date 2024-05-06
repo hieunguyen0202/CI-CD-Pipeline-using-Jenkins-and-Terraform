@@ -91,7 +91,83 @@
   sudo apt-get install terraform
 
   ```
+
+- Verify that
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/28cf697e-2aa7-47a8-8db9-0a450aa46d1d)
+
+- Next, install some more plugins for `git` `github` and make sure to restart the jenkins server and login again
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/264c1413-3587-460b-a191-a760aff1a923)
+
+### Create github repository and setup credentail on Jenkins
+- Create private repository with name `gcp-tf-jenkins`
+- Create some file `main.tf` and `Jenkinsfile`
+
+```tf
+resource "google_storage_bucket" "my-bucket" {
+  name                     = "githubdemo-bucket-001"
+  project                  = "ci-cd-jenkins-terraform"
+  location                 = "US"
+  force_destroy            = true
+  public_access_prevention = "enforced"
+}
+```
+
+```jenkins
+pipeline {
+    agent any
+	
+    environment {
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-key')
+	GIT_TOKEN = credentials('git-token')
+    }
+	
+    stages {
+        stage('Git Checkout') {
+            steps {
+               git "https://${GIT_TOKEN}@github.com/vishal-bulbule/gcp-tf-jenkin.git"
+            }
+        }
+        
+        stage('Terraform Init') {
+            steps {
+                script {
+                    sh 'terraform init'
+                }
+            }
+        }
+        
+        stage('Terraform Plan') {
+            steps {
+                script {
+                    sh 'terraform plan -out=tfplan'
+                }
+            }
+        }
+
+	    stage('Manual Approval') {
+            steps {
+                input "Approve?"
+            }
+        }
+	    
+        stage('Terraform Apply') {
+            steps {
+                script {
+                    sh 'terraform apply tfplan'
+                }
+            }
+        }
+    }
+}
+```
+
+
   
+
+
+
 
   
 
