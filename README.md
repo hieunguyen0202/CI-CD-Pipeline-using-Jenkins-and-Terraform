@@ -9,4 +9,19 @@
 ### Setup project on Google Cloud Platform
 - Go to [GCP platform](https://console.cloud.google.com/welcome?hl=vi&project=festive-flame-414810)
 - Create new project with name `ci-cd-jenkins-terraform`
+- Remember to set up billing account for this project
+
+### Setup Jenkin fron marketplace
+- Search for `jenkin`
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/fc111635-de04-4975-bf0c-043bf5ed821c)
+
+- Click `get started` with jenkins and deploy jenkins with virtual machine
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/46f268ce-ebd3-4c3c-b2e7-5c085d79a77f)
+
+- Make sure to enable API for some services like this
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/7ba0e0d9-da26-4c6d-bff4-c6f1b4f2b57f)
+
 - 
