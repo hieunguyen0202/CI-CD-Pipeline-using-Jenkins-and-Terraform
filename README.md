@@ -24,4 +24,17 @@
 
   ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/7ba0e0d9-da26-4c6d-bff4-c6f1b4f2b57f)
 
-- 
+- Next, you should fill some infomation to configure jenkins on VM instance
+  - Give a name `jenkins-vm`
+  - Choose zone `us-central1-a` or give any zone that you like
+  - Allow for firewall rules
+
+    ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/d77407c7-2484-46fa-b2d6-e2590ff982dd)
+
+  - Everything else left by default
+  - Click on `Deploy`
+ 
+  
+
+
+  
