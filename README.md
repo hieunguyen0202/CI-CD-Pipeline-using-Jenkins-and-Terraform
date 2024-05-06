@@ -128,7 +128,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-               git "https://${GIT_TOKEN}@github.com/vishal-bulbule/gcp-tf-jenkin.git"
+               git "https://${GIT_TOKEN}@github.com/hieunguyen0202/gcp-tf-jenkins.git"
             }
         }
         
@@ -205,7 +205,38 @@ pipeline {
 
   ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/a93b2002-aed7-4354-9ffd-fd7ccf77f96a)
 
+- Fill some infomation. Remember to add token credentials on this URL github repository
 
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/4c9afcd0-0edb-464d-9851-81305dd09cc6)
+
+- Make sure, you should use `master` branch instead of using `main` branch
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/18eb6985-f455-4bdb-a048-6c173b9362dc)
+
+- Go back to jenkinsfile to check everything that match with configuration in Jenkins
+- Click on `Build now` to see the result of pipeline
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/8a761308-7160-44ac-93e0-f46cc3b25b1c)
+
+### Setup webhook for automatically trigger pipeline whenever someone commit to github
+- Go to `configure` -> Check option `GitHub hook trigger for GITScm polling` -> Click Save
+- Go back to github repo -> Click on `Settings` -> Click on `Webhooks` -> Add webhook and fill some information like this
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/a73cb486-cbc2-4712-8a13-a200c6121906)
+
+### Test
+- Go to the github and modify the `main.tf` file like this
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/df633729-3c3f-46b5-a23a-d0b5944bfe2b)
+
+- And check the result of pipeline on Jenkins
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/11722daf-33ac-4d39-8405-1aa679a7425a)
+
+
+
+
+  
 
   
 
