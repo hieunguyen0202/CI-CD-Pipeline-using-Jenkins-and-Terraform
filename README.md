@@ -1,4 +1,4 @@
-# CI-CD-Pipeline-using-Jenkins-and-Terraform
+![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/6d3dda42-18b5-490a-8f09-eaa81669ebfc)# CI-CD-Pipeline-using-Jenkins-and-Terraform
 ## Architecture diagram 
 
 ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/27c0e4ea-d731-4d1f-9768-f2d0ca3daae7)
@@ -175,7 +175,38 @@ pipeline {
   ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/d8d8a0c3-78e6-459f-9c65-95c54b545bba)
 
 - Go back to Jenkin and add credentials (Manage Jenkins -> Credentials -> System -> Global credentials (unrestricted) -> Add Credentials)
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/8772605e-4090-45ed-8926-3d85889521c4)
+
 - Choose type kind `Secret file` and upload the Key JSON file and give a name `gcp-key` that the same name in Jenkins config file
+
+- Next, go back to github, and go to `Settings` -> `Developer Settings` -> Tokens
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/98f13b8c-ba46-477f-a098-ecffe07fd7b6)
+
+- Generate new token (Classic)
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/42262698-a501-40ad-986f-baa570275a49)
+
+- Give a note name `jenkin-demo` and check only `repo` and click generate
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/338c0024-e753-42bd-afd9-7cabcef0f1d6)
+
+- Copy this token for this case like this `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`
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/d32d27f1-bb97-431f-ae0a-4869f1a2ea75)
+
+- Go back to jenkins again and add credentials for that token and choose the type `Secret text` and give a name `git-token`
+
+  ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/5b7fab75-b22b-4a06-8126-9782c665119b)
+
+
+  
+
+  
+
+
+
 
   
 
