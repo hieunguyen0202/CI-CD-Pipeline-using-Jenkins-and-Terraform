@@ -1,4 +1,4 @@
-![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/6d3dda42-18b5-490a-8f09-eaa81669ebfc)# CI-CD-Pipeline-using-Jenkins-and-Terraform
+# CI-CD-Pipeline-using-Jenkins-and-Terraform
 ## Architecture diagram 
 
 ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/27c0e4ea-d731-4d1f-9768-f2d0ca3daae7)
@@ -205,7 +205,7 @@ pipeline {
 
   ![image](https://github.com/hieunguyen0202/CI-CD-Pipeline-using-Jenkins-and-Terraform/assets/98166568/a93b2002-aed7-4354-9ffd-fd7ccf77f96a)
 
-- 
+
 
   
 
